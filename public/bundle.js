@@ -63,21 +63,111 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var MyComponent = _react2.default.createClass({
-	    displayName: 'MyComponent',
+	var botLost = [{
+	  "handle": "describemeknot",
+	  "img": "https://pbs.twimg.com/profile_images/798175562640588800/xnNzNUow.jpg",
+	  "bot": "Describe Me Knot"
+	}, {
+	  "handle": "michaelswebbot",
+	  "img": "https://abs.twimg.com/sticky/default_profile_images/default_profile_2_400x400.png",
+	  "bot": "Michael Li"
+	}, {
+	  "handle": "angstybot",
+	  "img": "https://pbs.twimg.com/profile_images/798240014157090816/mhssYKwm.jpg",
+	  "bot": "Millenial"
+	}, {
+	  "handle": "testbawt",
+	  "img": "https://pbs.twimg.com/profile_images/798239102491643904/oHQ3HOLB_400x400.jpg",
+	  "bot": "GreekLifeTruths"
+	}, {
+	  "handle": "FruitFactBot",
+	  "img": "https://pbs.twimg.com/profile_images/798273222349357057/eCkZ-zSA.jpg",
+	  "bot": "Fruit Facts"
+	}, {
+	  "handle": "camille_weins",
+	  "img": "https://pbs.twimg.com/profile_images/796944447975981056/mLeeJjbr_400x400.jpg",
+	  "bot": "Friendly pharma"
+	}, {
+	  "handle": "rcboto",
+	  "img": "https://pbs.twimg.com/profile_images/798260013328437253/V8cwS88s_400x400.jpg",
+	  "bot": "NYU Breaking News"
+	}, {
+	  "handle": "jtharrison0528",
+	  "img": "https://abs.twimg.com/sticky/default_profile_images/default_profile_3_400x400.png",
+	  "bot": "celeb gossip"
+	}, {
+	  "handle": "clickbait_",
+	  "img": "https://pbs.twimg.com/profile_images/798182924533243904/KWjpr0cj_400x400.jpg",
+	  "bot": "clickbait generator"
+	}, {
+	  "handle": "KirsalyBotTest1",
+	  "img": "https://pbs.twimg.com/profile_images/797994940399763456/ReaQ9Qjh_400x400.jpg",
+	  "bot": "What aBot colors?"
+	}, {
+	  "handle": "femalegazebot",
+	  "img": "https://pbs.twimg.com/profile_images/797259377975631872/Udu2AbCw_400x400.jpg",
+	  "bot": "female gaze bot"
+	}, {
+	  "handle": "connormaxlinbot",
+	  "img": "https://abs.twimg.com/sticky/default_profile_images/default_profile_2_400x400.png",
+	  "bot": "random new products"
+	}];
 
-	    render: function render() {
-	        return _react2.default.createElement(
-	            'h1',
-	            null,
-	            'Hi ',
-	            this.props.name,
-	            ' '
-	        );
-	    }
+	var Profile = _react2.default.createClass({
+	  displayName: 'Profile',
+
+	  getInitialState: function getInitialState() {
+	    return {
+	      searchTerm: undefined
+	    };
+	  },
+	  handleChange: function handleChange() {
+	    this.setState({
+	      searchTerm: e.target.value
+	    });
+	  },
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      { className: 'profile' },
+	      _react2.default.createElement(
+	        'a',
+	        { href: 'http://twitter.com/' + this.props.handle },
+	        _react2.default.createElement('img', { src: this.props.img }),
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          this.props.bot
+	        )
+	      )
+	    );
+	  }
 	});
 
-	_reactDom2.default.render(_react2.default.createElement(MyComponent, { name: 'jason' }), document.getEementById('app'));
+	var ProfileList = _react2.default.createClass({
+	  displayName: 'ProfileList',
+
+	  render: function render() {
+	    // map profiles to elements
+	    var profiles = this.props.map(function (bot) {
+	      return _react2.default.createElement(Profile, { hande: bot.handle, img: bot.img, bot: bot.bot, key: bot.handle });
+	    });
+
+	    return _react2.default.createElement(
+	      'div',
+	      { className: 'profile-list' },
+	      _react2.default.createElement('input', { onChange: this.handleChange }),
+	      _react2.default.createElement(
+	        'h1',
+	        null,
+	        this.state.searchTerm
+	      ),
+	      profiles
+	    );
+	  }
+	});
+
+	_reactDom2.default.render(_react2.default.createElement(ProfileList, { profiles: botList }), document.getEementById('app'));
 
 /***/ },
 /* 2 */

@@ -58,3 +58,6 @@ This will run our JSX through bable and spit out regular javascript.
 
 **See [slides]() for setup.** src/index.js, then webpack config
 
+### State and Props
+* State is Local - Can Change
+* Props are immutable - cannot change
