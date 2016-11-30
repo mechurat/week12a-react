@@ -2,7 +2,7 @@
 * Front-end UI Frameworks and Libraries
 
 We can apply Model View Controller (MVC) to User Interface design. See: 
-[Slides(3) Graphic]()
+[Slides(3) Graphic](https://docs.google.com/presentation/d/18nUK_kJ03aPKFgwegjB_1Yeyq5rvcuTEN1iUIjYxgB8/edit#slide=id.g19d53e3794_0_54)
 
 Data-Binding is a problem between the Model and View. The View needs to be a true representation of the Model.
 
@@ -15,13 +15,13 @@ Contents of Framework:
 * Routing - Single Page App
 
 **There are many types of UI frameworks. Here are some examples:** 
-[Libraries Link]()
+[Libraries Link](https://docs.google.com/presentation/d/18nUK_kJ03aPKFgwegjB_1Yeyq5rvcuTEN1iUIjYxgB8/edit#slide=id.g19d53e3794_0_6)
 
 ## React - Facebook Framework
-React is component-based. [Example]()
+React is component-based. [Example](https://docs.google.com/presentation/d/18nUK_kJ03aPKFgwegjB_1Yeyq5rvcuTEN1iUIjYxgB8/edit#slide=id.g19d53e3794_0_90)
 
 ### Components
-A useful way to organize information flow. See this [chart]() for an example. Everything needs to get a piece of information from an component lower in the hierarchy.
+A useful way to organize information flow. See this [chart](https://docs.google.com/presentation/d/18nUK_kJ03aPKFgwegjB_1Yeyq5rvcuTEN1iUIjYxgB8/edit#slide=id.g19d53e3794_0_103) for an example. Everything needs to get a piece of information from an component lower in the hierarchy.
 
 ### 1-way data-binding
 In this situation, data is passed from Parent to Children, so it goes from Higher to Lower in the Hierarchy. This can be one way or the other in different frameworks.
@@ -56,7 +56,7 @@ This will run our JSX through bable and spit out regular javascript.
     
 (Side Note: We no longer need the CDN of react once the package is installed)
 
-**See [slides]() for setup.** src/index.js, then webpack config
+**See [slides](https://docs.google.com/presentation/d/18nUK_kJ03aPKFgwegjB_1Yeyq5rvcuTEN1iUIjYxgB8/edit#slide=id.g19d53e3794_0_213) for setup.** src/index.js, then webpack config
 
 ### State and Props
 * State is Local - Can Change
